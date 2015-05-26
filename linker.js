@@ -30,10 +30,15 @@ function walk(node)
 function handleName(textNode)
 {
     var name = textNode.nodeValue;
-    if (name.substring(0,name.indexOf(' ')) in idList)
+    var pos = name.indexOf(' ');
+    if (pos > 0 )
+    {
+        name = name.substring(0,name.indexOf(' '));
+    }
+    if (name in idList)
     {
         var cNode = document.createElement("a");
-        cNode.setAttribute("href", "http://polyratings.com/eval.phtml?profid="+ idList[name.substring(0,name.indexOf(' '))]);
+        cNode.setAttribute("href", "http://polyratings.com/eval.phtml?profid="+ idList[name]);
         var parent = textNode.parentNode;
         parent.replaceChild(cNode,textNode);
         cNode.appendChild(textNode);
