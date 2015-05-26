@@ -3,8 +3,7 @@
 
 	"name": "PASS2PolyRatings",
 	"description": "Link teacher names on PASS to PolyRatings.",
-	"version": "1.0",
-    "update_url": "http://dynamicdata.io/P2PRupdates.xml",
+	"version": "1.1",
 	"content_scripts": 
 	[
 		{
