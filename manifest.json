@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+
+	"name": "PASS2PolyRatings",
+	"description": "Link teacher names on PASS to PolyRatings.",
+	"version": "1.0",
+
+	"content_scripts": 
+	[
+		{
+			"matches": ["http://pass.calpoly.edu/main.html"],
+			"js": ["linker.js"],
+			"run_at": "document_end"
+		}
+	]
+}
