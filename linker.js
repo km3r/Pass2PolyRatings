@@ -46,11 +46,22 @@ function handleName(textNode)
         cNode.appendChild(textNode);
         getSetRating(idList[name], textNode);
     }
-    else if (name.split(",").length == 2)
+    else if (name.split(",").length == 2 && name.split(":").length == - 1 )
     {
         var cNode = document.createElement("a");
         cNode.setAttribute("href", "https://www.google.com/search?q=" + name + " site:polyratings.com");
         cNode.setAttribute("target","_blank");
+        var parent = textNode.parentNode;
+        parent.replaceChild(cNode,textNode);
+        cNode.appendChild(textNode);
+    }
+    else if (name.split(" | Units:").length == 2)
+    {
+        name = name.split(" ")[0].toLowerCase();
+        var cNode = document.createElement("a");
+        cNode.setAttribute("href", "http://catalog.calpoly.edu/coursesaz" + name);
+        cNode.setAttribute("target","_blank");
+        cNode.setAttribute("style","color: white");
         var parent = textNode.parentNode;
         parent.replaceChild(cNode,textNode);
         cNode.appendChild(textNode);
