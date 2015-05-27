@@ -59,7 +59,7 @@ function handleName(textNode)
     {
         name = name.split(" ")[0].toLowerCase();
         var cNode = document.createElement("a");
-        cNode.setAttribute("href", "http://catalog.calpoly.edu/coursesaz" + name);
+        cNode.setAttribute("href", "http://catalog.calpoly.edu/coursesaz/" + name);
         cNode.setAttribute("target","_blank");
         cNode.setAttribute("style","color: white");
         var parent = textNode.parentNode;
