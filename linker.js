@@ -74,6 +74,8 @@ function getSetRating(id, node){
         node.nodeValue = node.nodeValue + ratings[id];
         return;
     }
+
+    return;
     var xmlhttp;
     if (window.XMLHttpRequest)
     {// code for IE7+, Firefox, Chrome, Opera, Safari
