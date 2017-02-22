@@ -3,7 +3,7 @@
 
 	"name": "PASS2PolyRatings",
 	"description": "Link teacher names on PASS to PolyRatings.",
-	"version": "4.2.0",
+	"version": "2.0.0",
 	"permissions": [
 		"webRequest"
     ],
