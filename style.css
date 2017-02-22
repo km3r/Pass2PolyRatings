@@ -14,12 +14,13 @@
 
 .hoverable:hover {
     background:rgba(0,0,0,0.2) !important;
-    text-color: blue;
-    text-decoration: underline;
+
 }
 
 .hoverable {
 //background-color: black !important;
+    text-color: #0000ff;
+    text-decoration: underline;
 }
 
 .wordCloud {

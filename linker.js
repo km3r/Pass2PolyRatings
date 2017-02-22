@@ -21,8 +21,12 @@ function parseName(teacher) {
     teacher.className += 'hoverable'
 
     teacher.onclick = function(event) {
-        window.open('http://polyratings.com/eval.php?profid=' + teacherData.id)
+        if (teacherData.id != undefined)
+         window.open('http://polyratings.com/eval.php?profid=' + teacherData.id)
+        else
+         window.open('http://www.google.com/search?q=' + teacherName + " site:polyratings.com")
     }
+    if (teacherData.id != undefined)
     teacher.childNodes[0].data = teacher.childNodes[0].data + " (" + teacherData.rating + "/4.0)"
 }
 
