@@ -3,18 +3,17 @@
 
 	"name": "PASS2PolyRatings",
 	"description": "Link teacher names on PASS to PolyRatings.",
-	"version": "1.5.0",
+	"version": "4.2.0",
 	"permissions": [
-		"webRequest",
-		"*://*.polyratings.com/"
+		"webRequest"
     ],
-    "icons": { "48": "logo48.png",
-      "128": "logo128.png" },
+    "icons": { "48": "logo48.png"},
 	"content_scripts": 
 	[
 		{
 			"matches": ["https://pass.calpoly.edu/main.html"],
-			"js": ["linker.js"],
+			"js": ["data.js", "linker.js"],
+			"css": ["style.css"],
 			"run_at": "document_end"
 		}
 	]
